@@ -33,16 +33,12 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const isHeroTransparent = pathname === "/" && !scrolled;
-
   return (
     <>
       <motion.header
-        className={`sticky top-0 z-50 transition-all duration-200 ${
-          isHeroTransparent
-            ? "bg-transparent border-b border-transparent text-white"
-            : "bg-paper-50/95 backdrop-blur-md border-b border-border-subtle"
-        } ${scrolled ? "shadow-sm" : ""}`}
+        className={`sticky top-0 z-50 transition-all duration-200 bg-paper-50/95 backdrop-blur-md border-b border-border-subtle ${
+          scrolled ? "shadow-sm" : ""
+        }`}
         initial={false}
         animate={{
           height: compressed ? 64 : 76,
@@ -51,13 +47,9 @@ export function Header() {
       >
         <Container className="flex h-full items-center justify-between">
           {/* HTC Wordmark in Instrument Serif */}
-          <Link href="/" className={`shrink-0 flex items-center group py-1 ${isHeroTransparent ? "text-white" : ""}`} aria-label="HTC Home">
+          <Link href="/" className="shrink-0 flex items-center group py-1 text-ink-900" aria-label="HTC Home">
             <motion.span
-              className={`font-serif font-bold tracking-wider transition-colors ${
-                isHeroTransparent
-                  ? "text-white group-hover:text-paper-200"
-                  : "text-ink-900 group-hover:text-red-700"
-              }`}
+              className="font-serif font-bold tracking-wider transition-colors text-ink-900 group-hover:text-red-700"
               initial={false}
               animate={{ fontSize: compressed ? "1.4rem" : "1.75rem" }}
               transition={{ duration: duration.base, ease: ease.inOut }}
@@ -77,19 +69,13 @@ export function Header() {
                   href={link.href}
                   className={`group relative py-1 text-body-sm font-medium transition-colors shrink-0 ${
                     isActive
-                      ? isHeroTransparent
-                        ? "text-white font-semibold"
-                        : "text-red-700 font-semibold"
-                      : isHeroTransparent
-                      ? "text-white/90 hover:text-white"
+                      ? "text-red-700 font-semibold"
                       : "text-text-primary hover:text-red-700"
                   }`}
                 >
                   {link.label}
                   <span
-                    className={`absolute bottom-0 left-0 h-0.5 w-full ${
-                      isHeroTransparent ? "bg-white" : "bg-red-600"
-                    } transition-transform duration-200 ${
+                    className={`absolute bottom-0 left-0 h-0.5 w-full bg-red-600 transition-transform duration-200 ${
                       isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                     }`}
                   />

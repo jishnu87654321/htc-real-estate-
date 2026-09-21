@@ -54,22 +54,21 @@ test.describe("Revision 11 — Hero Simplification and Legibility Over Photograp
     }
   });
 
-  test("header is white-on-transparent over the hero and paper after scrolling", async ({ page }) => {
+  test("header is crisp, legible, and dark-toned over hero and after scrolling", async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto("/");
     await page.waitForLoadState("networkidle");
 
-    // Initially at top: header background transparent, wordmark/links white
+    // Initially at top: header is backdrop blurred paper with crisp dark wordmark
     const headerInitial = await page.evaluate(() => {
       const header = document.querySelector("header");
       const wordmark = header?.querySelector("a[href='/']");
       return {
-        hasTransparentBg: header?.classList.contains("bg-transparent") || window.getComputedStyle(header!).backgroundColor === "rgba(0, 0, 0, 0)",
         wordmarkColor: wordmark ? window.getComputedStyle(wordmark).color : "",
       };
     });
 
-    expect(headerInitial.wordmarkColor).toBe("rgb(255, 255, 255)");
+    expect(headerInitial.wordmarkColor).not.toBe("rgb(255, 255, 255)");
 
     // Scroll past hero
     await page.evaluate(() => {
@@ -86,7 +85,7 @@ test.describe("Revision 11 — Hero Simplification and Legibility Over Photograp
       };
     });
 
-    // Scrolled: returns to dark text
+    // Scrolled: stays crisp dark text
     expect(headerScrolled.wordmarkColor).not.toBe("rgb(255, 255, 255)");
   });
 
