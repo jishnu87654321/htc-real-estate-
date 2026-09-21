@@ -1,13 +1,10 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Photo Transition System (REV-09)", () => {
+test.describe("Photo Transition System (REV-09 & REV-16)", () => {
   test("outgoing layer stays fully opaque (opacity === '1') during the hero transition", async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto("/");
     await page.waitForLoadState("networkidle");
-
-    // Pause autoplay for controlled sampling
-    await page.locator("[aria-label='Pause slideshow']").click();
 
     // Click next slide button
     const jumpBtn = page.locator("[aria-label='Jump to slide 2']");
@@ -17,7 +14,7 @@ test.describe("Photo Transition System (REV-09)", () => {
     for (let i = 0; i < 15; i++) {
       await page.waitForTimeout(50);
       const prevOpacity = await page.evaluate(() => {
-        const prev = document.querySelector("[data-hero-carousel] [data-photo-layer='prev']");
+        const prev = document.querySelector("[data-hero-photo] [data-photo-layer='prev']");
         if (!prev) return null;
         return window.getComputedStyle(prev).opacity;
       });
@@ -33,11 +30,9 @@ test.describe("Photo Transition System (REV-09)", () => {
     await page.goto("/");
     await page.waitForLoadState("networkidle");
 
-    await page.locator("[aria-label='Pause slideshow']").click();
-
     const getFrameLuminance = async () => {
       return page.evaluate(() => {
-        const container = document.querySelector("[data-hero-carousel] [data-photo-transition-container]");
+        const container = document.querySelector("[data-hero-photo] [data-photo-transition-container]");
         if (!container) return 128;
         const rect = container.getBoundingClientRect();
         return rect.width > 0 ? 128 : 0;
@@ -61,14 +56,13 @@ test.describe("Photo Transition System (REV-09)", () => {
     await page.goto("/");
     await page.waitForLoadState("networkidle");
 
-    await page.locator("[aria-label='Pause slideshow']").click();
     await page.locator("[aria-label='Jump to slide 2']").dispatchEvent("click");
 
     let prevScale = 1.05;
     for (let i = 0; i < 15; i++) {
       await page.waitForTimeout(30);
       const scale = await page.evaluate(() => {
-        const prevEl = document.querySelector("[data-hero-carousel] [data-photo-layer='prev'] > div");
+        const prevEl = document.querySelector("[data-hero-photo] [data-photo-layer='prev'] > div");
         if (!prevEl) return 1.0;
         const style = window.getComputedStyle(prevEl);
         const transform = style.transform;
@@ -91,17 +85,16 @@ test.describe("Photo Transition System (REV-09)", () => {
     await page.goto("/");
     await page.waitForLoadState("networkidle");
 
-    await page.locator("[aria-label='Pause slideshow']").click();
     await page.locator("[aria-label='Jump to slide 2']").dispatchEvent("click");
 
     // Wait for transition to complete
     await page.waitForFunction(() => {
-      const current = document.querySelector("[data-hero-carousel] [data-photo-layer='current']");
+      const current = document.querySelector("[data-hero-photo] [data-photo-layer='current']");
       return current?.getAttribute("data-entering") === "false";
     }, { timeout: 3000 });
 
     const endMask = await page.evaluate(() => {
-      const current = document.querySelector("[data-hero-carousel] [data-photo-layer='current']");
+      const current = document.querySelector("[data-hero-photo] [data-photo-layer='current']");
       if (!current) return "none";
       const style = window.getComputedStyle(current);
       return style.maskImage || (style as any).webkitMaskImage || "none";
@@ -115,7 +108,7 @@ test.describe("Photo Transition System (REV-09)", () => {
     await page.waitForLoadState("networkidle");
 
     const heroLayerCount = await page.evaluate(() => {
-      return document.querySelectorAll("[data-hero-carousel] [data-photo-layer]").length;
+      return document.querySelectorAll("[data-hero-photo] [data-photo-layer]").length;
     });
     expect(heroLayerCount).toBeLessThanOrEqual(2);
 
@@ -155,18 +148,16 @@ test.describe("Photo Transition System (REV-09)", () => {
     await page.goto("/");
     await page.waitForLoadState("networkidle");
 
-    await page.locator("[aria-label='Pause slideshow']").click();
-
     // Trigger hero transition
     await page.locator("[aria-label='Jump to slide 2']").dispatchEvent("click");
     await page.waitForFunction(() => {
-      const el = document.querySelector("[data-hero-carousel] [data-photo-layer='current']");
+      const el = document.querySelector("[data-hero-photo] [data-photo-layer='current']");
       return el?.getAttribute("data-entering") === "true";
     }, { timeout: 1000 });
 
     const t0 = Date.now();
     await page.waitForFunction(() => {
-      const el = document.querySelector("[data-hero-carousel] [data-photo-layer='current']");
+      const el = document.querySelector("[data-hero-photo] [data-photo-layer='current']");
       return el?.getAttribute("data-entering") === "false";
     }, { timeout: 3000 });
     const heroElapsed = Date.now() - t0;
@@ -180,7 +171,7 @@ test.describe("Photo Transition System (REV-09)", () => {
     await page.waitForLoadState("networkidle");
 
     const heroObjectPos = await page.evaluate(() => {
-      const img = document.querySelector("[data-hero-carousel] [data-photo-layer='current'] img") as HTMLImageElement;
+      const img = document.querySelector("[data-hero-photo] [data-photo-layer='current'] img") as HTMLImageElement;
       return img?.style?.objectPosition;
     });
     expect(heroObjectPos).toBe("55% 45%");
@@ -194,12 +185,12 @@ test.describe("Photo Transition System (REV-09)", () => {
 
     await page.locator("[aria-label='Jump to slide 2']").dispatchEvent("click");
     await page.waitForFunction(() => {
-      const el = document.querySelector("[data-hero-carousel] [data-photo-layer='current']");
+      const el = document.querySelector("[data-hero-photo] [data-photo-layer='current']");
       return el?.getAttribute("data-entering") === "true";
     }, { timeout: 1000 });
 
     const maskCheck = await page.evaluate(() => {
-      const el = document.querySelector("[data-hero-carousel] [data-photo-layer='current']");
+      const el = document.querySelector("[data-hero-photo] [data-photo-layer='current']");
       if (!el) return "none";
       const style = window.getComputedStyle(el);
       return style.maskImage || style.webkitMaskImage || "none";
@@ -208,7 +199,7 @@ test.describe("Photo Transition System (REV-09)", () => {
 
     const t0 = Date.now();
     await page.waitForFunction(() => {
-      const el = document.querySelector("[data-hero-carousel] [data-photo-layer='current']");
+      const el = document.querySelector("[data-hero-photo] [data-photo-layer='current']");
       return el?.getAttribute("data-entering") === "false";
     }, { timeout: 1500 });
     const elapsed = Date.now() - t0;

@@ -6,9 +6,9 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { Container } from "@/components/primitives/Container";
 import { useReducedMotion } from "@/lib/motion";
 import { useHeroSlides } from "@/hooks/useHeroSlides";
-import { HeroAmbient } from "@/components/sections/hero/HeroAmbient";
+import { HERO_SLIDES } from "@/lib/hero-slides";
 import { RotatingLine } from "@/components/sections/hero/RotatingLine";
-import { HeroCarousel } from "@/components/sections/hero/HeroCarousel";
+import { PhotoTransition, type PhotoItem } from "@/components/ui/PhotoTransition";
 
 export function Hero() {
   const heroRef = useRef<HTMLElement | null>(null);
@@ -36,9 +36,6 @@ export function Hero() {
   // Differential parallax transforms
   const copyY = useTransform(heroExitProgress, [0, 1], [0, -60], { clamp: true });
   const copyOpacity = useTransform(heroExitProgress, [0, 0.8], [1, 0], { clamp: true });
-  const frameScale = useTransform(heroExitProgress, [0, 1], [1, 0.88], { clamp: true });
-  const frameY = useTransform(heroExitProgress, [0, 1], [0, 80], { clamp: true });
-  const frameOpacity = useTransform(heroExitProgress, [0, 1], [1, 0.35], { clamp: true });
 
   // Scroll cue opacity (fades out by 15% progress)
   const cueOpacity = useTransform(heroExitProgress, [0, 0.15], [1, 0], { clamp: true });
@@ -71,7 +68,7 @@ export function Hero() {
     };
   }, []);
 
-  // Single unified hero slides driver (§A1)
+  // Single unified hero slides driver
   const slides = useHeroSlides({
     dwell: 4000,
     reducedMotion,
@@ -80,30 +77,88 @@ export function Hero() {
     isVisible: isHeroVisible && !recedePaused,
   });
 
+  // Calculate direction for continuous Ken Burns and directional transitions
+  let direction = 1;
+  if (slides.current === 0 && slides.prev === HERO_SLIDES.length - 1) {
+    direction = 1;
+  } else if (slides.current === HERO_SLIDES.length - 1 && slides.prev === 0) {
+    direction = -1;
+  } else {
+    direction = slides.current >= slides.prev ? 1 : -1;
+  }
+
+  const currentSlide = HERO_SLIDES[slides.current] || HERO_SLIDES[0];
+  const prevSlideObj = HERO_SLIDES[slides.prev] || HERO_SLIDES[0];
+
+  const currentItem: PhotoItem = {
+    id: currentSlide.id,
+    src: currentSlide.image,
+    alt: currentSlide.alt,
+    focal: currentSlide.focal,
+    avgColor: currentSlide.avgColor,
+    priority: slides.current === 0,
+  };
+
+  const prevItem: PhotoItem = {
+    id: prevSlideObj.id,
+    src: prevSlideObj.image,
+    alt: prevSlideObj.alt,
+    focal: prevSlideObj.focal,
+    avgColor: prevSlideObj.avgColor,
+  };
+
   return (
     <section
       ref={heroRef}
       data-hero
+      aria-label="Featured community, rotating every few seconds — hover or focus to pause"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onFocusCapture={() => setIsFocused(true)}
+      onBlurCapture={() => setIsFocused(false)}
       className="relative isolate overflow-clip min-h-[calc(100svh-var(--header-h,80px))] max-h-[960px] flex flex-col justify-center pt-8 pb-16 md:pt-12 md:pb-24"
     >
-      {/* Layer 0: Full-bleed ambient background (REV-11 §4.1) */}
-      <HeroAmbient current={slides.current} reducedMotion={reducedMotion} />
+      {/* Layer 0: One full-bleed sharp photo layer (REV-16 §4) */}
+      <div
+        data-hero-photo
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{ borderRadius: "0px", boxShadow: "none" }}
+      >
+        <PhotoTransition
+          currentSlide={currentItem}
+          prevSlide={prevItem}
+          mode="hero"
+          direction={direction}
+          revealMs={1400}
+          revealEase="cubic-bezier(0.45, 0, 0.15, 1)"
+          enableSheen={true}
+          reducedMotion={reducedMotion}
+          className="w-full h-full"
+          sizes="100vw"
+        />
+      </div>
 
-      <Container className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 my-auto">
-        {/* Copy Column (Left) */}
+      {/* Layer 1: Directional Scrim (REV-16 §5) */}
+      <div data-hero-scrim className="absolute inset-0 z-[1] pointer-events-none" />
+
+      {/* Layer 2: Vignette (REV-16 §5.3) */}
+      <div data-hero-vignette className="absolute inset-0 z-[2] pointer-events-none" />
+
+      {/* Layer 3: Copy Column Overlay (REV-16 §8) */}
+      <Container className="relative z-[3] my-auto w-full">
         <motion.div
           style={reducedMotion ? {} : { y: copyY, opacity: copyOpacity }}
-          className="lg:col-span-6 flex flex-col justify-center order-2 lg:order-1"
+          className="max-w-xl lg:max-w-2xl flex flex-col justify-center text-left"
         >
-          {/* Static Verbatim H1 (REV-11 §4.3: High contrast white with soft halo) */}
-          <h1 className="max-w-xl font-serif text-display-xl leading-[1.02] tracking-[-0.02em] text-white [text-shadow:0_2px_24px_rgba(23,20,15,0.45)]">
+          {/* Static Verbatim H1 (REV-16 §0, §5.2) */}
+          <h1 className="font-serif text-display-xl leading-[1.02] tracking-[-0.02em] text-white [text-shadow:0_2px_24px_rgba(23,20,15,0.45)]">
             Homes from the people who run the building.
           </h1>
 
-          {/* Rotating Supporting Line & Tag (REV-11 §4.3 & §4.4) */}
+          {/* Rotating Supporting Line & Tag (REV-16 §0 #3) */}
           <RotatingLine current={slides.current} reducedMotion={reducedMotion} />
 
-          {/* CTAs (REV-11 §3.2) */}
+          {/* CTAs (REV-16 §0 #6) */}
           <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             <Link
               href="/properties"
@@ -120,12 +175,12 @@ export function Hero() {
             </Link>
           </div>
 
-          {/* Supporting reassurance line (REV-11 §3.3) */}
+          {/* Supporting reassurance line */}
           <p className="mt-4 font-sans text-body-sm text-white/75">
             No brokerage. No fee to contact an owner.
           </p>
 
-          {/* Scroll Cue (White on dark photographic hero) */}
+          {/* Scroll Cue */}
           <motion.div
             data-scroll-cue
             style={reducedMotion ? {} : { opacity: cueOpacity }}
@@ -145,43 +200,49 @@ export function Hero() {
             </div>
           </motion.div>
         </motion.div>
-
-        {/* Carousel Frame Column (Right) */}
-        <div
-          className="lg:col-span-6 flex flex-col items-center justify-center order-1 lg:order-2"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          onFocus={() => setIsFocused(true)}
-          onBlur={() => setIsFocused(false)}
-        >
-          <motion.div
-            data-hero-frame
-            style={
-              reducedMotion
-                ? {}
-                : {
-                    scale: frameScale,
-                    y: frameY,
-                    opacity: frameOpacity,
-                  }
-            }
-            className="w-full origin-center"
-          >
-            <HeroCarousel
-              current={slides.current}
-              prev={slides.prev}
-              progress={slides.progress}
-              isPaused={slides.isPaused}
-              isManualPaused={slides.isManualPaused}
-              togglePause={slides.togglePause}
-              goTo={slides.goTo}
-              next={slides.next}
-              prevSlide={slides.prevSlide}
-              reducedMotion={reducedMotion}
-            />
-          </motion.div>
-        </div>
       </Container>
+
+      {/* Layer 3: Bottom Progress Bars & Counter Indicator (REV-16 §7) */}
+      <div
+        data-hero-indicator
+        className="absolute bottom-6 inset-x-0 z-[3] flex flex-col items-center gap-2.5 pointer-events-auto"
+      >
+        {/* Segmented progress bars with jump buttons */}
+        <div className="flex items-center justify-center gap-2 max-w-xs w-full px-4">
+          {HERO_SLIDES.map((slideItem, idx) => {
+            const isCurrent = slides.current === idx;
+            const isPast = slides.current > idx;
+            return (
+              <button
+                key={slideItem.id}
+                type="button"
+                aria-label={`Jump to slide ${idx + 1}`}
+                onClick={() => slides.goTo(idx)}
+                className="group relative h-1.5 flex-1 rounded-full bg-white/25 overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              >
+                {isCurrent ? (
+                  <div
+                    className="h-full w-full bg-red-500 origin-left"
+                    style={{
+                      transform: reducedMotion ? "scaleX(1)" : `scaleX(${slides.progress})`,
+                      transition: reducedMotion ? "none" : "transform 50ms linear",
+                    }}
+                  />
+                ) : isPast ? (
+                  <div className="h-full w-full bg-red-500/70" />
+                ) : (
+                  <div className="h-full w-full bg-transparent group-hover:bg-white/20 transition-colors" />
+                )}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Slide Counter Pill */}
+        <div className="flex items-center rounded-full bg-ink-900/60 backdrop-blur-md px-3 py-0.5 text-label font-mono text-white/90 shadow-sm ring-1 ring-white/10 tabular-nums">
+          <span>{String(slides.current + 1).padStart(2, "0")} / {String(HERO_SLIDES.length).padStart(2, "0")}</span>
+        </div>
+      </div>
     </section>
   );
 }

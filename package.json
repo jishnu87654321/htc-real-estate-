@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "lint:tokens": "node scripts/check-tokens.mjs",
-    "prebuild": "node scripts/check-deps.mjs && node scripts/check-standins.mjs && node scripts/scan-images.mjs && node scripts/build-hero-bg.mjs && npm run lint:tokens",
+    "prebuild": "node scripts/check-deps.mjs && node scripts/check-standins.mjs && node scripts/scan-images.mjs && npm run lint:tokens",
     "db:generate": "drizzle-kit generate",
     "db:push": "drizzle-kit push",
     "db:migrate": "drizzle-kit migrate",

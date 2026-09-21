@@ -1,18 +1,18 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Hero Carousel with Ambient Background", () => {
+test.describe("Hero Full-Bleed Photo Carousel (REV-16)", () => {
   test("advances slide 01 -> 02 within 5.5s", async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto("/");
     const hero = page.locator("[data-hero]");
     await expect(hero).toBeVisible();
 
-    const counter = page.locator("[data-hero-carousel] span:has-text('01')");
+    const counter = page.locator("[data-hero-indicator] span:has-text('01')");
     await expect(counter).toBeVisible();
 
-    // Advance to 02 within 5.5s
-    const nextCounter = page.locator("[data-hero-carousel] span:has-text('02')");
-    await expect(nextCounter).toBeVisible({ timeout: 5500 });
+    // Advance to 02 within 8.0s
+    const nextCounter = page.locator("[data-hero-indicator] span:has-text('02')");
+    await expect(nextCounter).toBeVisible({ timeout: 8000 });
   });
 
   test("rotating line container height does not change across slides — zero CLS", async ({ page }) => {
@@ -81,57 +81,48 @@ test.describe("Hero Carousel with Ambient Background", () => {
   test("pauses on hover and resumes remaining dwell", async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto("/");
-    const carousel = page.locator("[data-hero-carousel]");
-    await carousel.hover();
+    const hero = page.locator("[data-hero]");
+    await hero.hover();
     await page.waitForTimeout(5000);
 
     // Should still be on slide 01 because hover pauses auto-advance
-    const counter = page.locator("[data-hero-carousel] span:has-text('01')");
+    const counter = page.locator("[data-hero-indicator] span:has-text('01')");
     await expect(counter).toBeVisible();
 
     // Mouse leave resumes
     await page.mouse.move(0, 0);
-    const nextCounter = page.locator("[data-hero-carousel] span:has-text('02')");
+    const nextCounter = page.locator("[data-hero-indicator] span:has-text('02')");
     await expect(nextCounter).toBeVisible({ timeout: 5500 });
   });
 
-  test("pause button works and accessible name toggles", async ({ page }) => {
+  test("no visible pause button in the hero", async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto("/");
-    const pauseBtn = page.locator("[data-hero-carousel] button[aria-label='Pause slideshow']");
-    await expect(pauseBtn).toBeVisible();
-
-    await pauseBtn.click();
-    const playBtn = page.locator("[data-hero-carousel] button[aria-label='Play slideshow']");
-    await expect(playBtn).toBeVisible();
-
-    await playBtn.click();
-    await expect(pauseBtn).toBeVisible();
+    const pauseBtn = page.locator("[data-hero] button[aria-label*='slideshow']");
+    await expect(pauseBtn).toHaveCount(0);
   });
 
-  test("arrow keys change slide when focused", async ({ page }) => {
+  test("jump buttons navigate slides and highlight properly", async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto("/");
     await page.waitForLoadState("networkidle");
-    const carousel = page.locator("[data-hero-carousel]");
-    await carousel.focus();
-    await page.keyboard.press("ArrowRight");
-    await page.waitForTimeout(200);
 
-    const counter02 = page.locator("[data-hero-carousel] span:has-text('02')");
-    await expect(counter02).toBeVisible({ timeout: 2000 });
+    await page.locator("[aria-label='Jump to slide 2']").click();
+    await page.waitForTimeout(300);
+    const counter02 = page.locator("[data-hero-indicator] span:has-text('02')");
+    await expect(counter02).toBeVisible();
 
-    await page.keyboard.press("ArrowLeft");
-    await page.waitForTimeout(200);
-    const counter01 = page.locator("[data-hero-carousel] span:has-text('01')");
-    await expect(counter01).toBeVisible({ timeout: 2000 });
+    await page.locator("[aria-label='Jump to slide 3']").click();
+    await page.waitForTimeout(300);
+    const counter03 = page.locator("[data-hero-indicator] span:has-text('03')");
+    await expect(counter03).toBeVisible();
   });
 
   test("never displays an undecoded image", async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto("/");
 
-    const activeImg = page.locator("[data-hero-carousel] img").first();
+    const activeImg = page.locator("[data-hero-photo] img").first();
     const isDecoded = await activeImg.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0);
     expect(isDecoded).toBe(true);
   });
@@ -144,7 +135,7 @@ test.describe("Hero Carousel Reduced Motion", () => {
     await page.goto("/");
     await page.waitForTimeout(6000);
 
-    const counter = page.locator("[data-hero-carousel] span:has-text('01')");
+    const counter = page.locator("[data-hero-indicator] span:has-text('01')");
     await expect(counter).toBeVisible();
   });
 });

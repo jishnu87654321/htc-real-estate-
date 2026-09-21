@@ -9,31 +9,31 @@ test.describe("Scroll Sequences Engine", () => {
     const section = page.locator("[data-difference-desktop]");
     await section.scrollIntoViewIfNeeded();
 
-    // Measure frame counter progression through scroll offsets
     const frames = await page.evaluate(async () => {
+      window.scrollTo(0, 0);
+      await new Promise((r) => setTimeout(r, 100));
       const sec = document.querySelector("[data-difference-desktop]") as HTMLElement;
       if (!sec) return [];
       const secRect = sec.getBoundingClientRect();
-      const currentScroll = window.scrollY;
-      const secTop = currentScroll + secRect.top;
+      const secTop = window.scrollY + secRect.top;
       const start = secTop;
       const end = secTop + sec.offsetHeight - window.innerHeight;
 
       const observed: string[] = [];
-      const offsets = [0.05, 0.5, 0.95];
+      const offsets = [0.02, 0.5, 0.98];
 
       for (const ratio of offsets) {
         window.scrollTo(0, start + (end - start) * ratio);
         window.dispatchEvent(new Event("scroll"));
-        await new Promise((r) => setTimeout(r, 1100));
+        await new Promise((r) => setTimeout(r, 900));
         const counter = document.querySelector("[data-difference-right] .font-mono");
         observed.push(counter?.textContent?.trim() || "");
       }
 
       // Reverse scroll
-      window.scrollTo(0, start + (end - start) * 0.05);
+      window.scrollTo(0, start + (end - start) * 0.02);
       window.dispatchEvent(new Event("scroll"));
-      await new Promise((r) => setTimeout(r, 1100));
+      await new Promise((r) => setTimeout(r, 900));
       const reverseCounter = document.querySelector("[data-difference-right] .font-mono");
       observed.push(reverseCounter?.textContent?.trim() || "");
 
@@ -65,9 +65,9 @@ test.describe("Scroll Sequences Engine", () => {
     const hasHover = await page.evaluate(() => window.matchMedia("(hover: hover)").matches);
     if (!hasHover) return;
 
-    const heroFrame = page.locator("[data-hero-frame]");
-    await heroFrame.scrollIntoViewIfNeeded();
-    await heroFrame.hover({ force: true });
+    const hero = page.locator("[data-hero]");
+    await hero.scrollIntoViewIfNeeded();
+    await hero.hover({ force: true });
 
     const counter = page.locator("[data-hero] .font-mono").first();
     await expect(counter).toContainText("01 / 04");

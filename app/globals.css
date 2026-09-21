@@ -323,37 +323,36 @@ body {
   }
 }
 
-/* ─── Hero Scrim (REV-11 §4.1, §4.5 & §5) ─── */
+/* ─── Hero Scrim & Vignette (REV-16 §4 & §5) ─── */
 [data-hero-scrim] {
   background:
-    /* Horizontal: dark behind copy on left, near-clear around card on right */
+    /* Horizontal: dark behind copy on left, near-clear on right where photo is showcased */
     linear-gradient(90deg,
-      rgba(23, 20, 15, 0.92)   0%,
-      rgba(23, 20, 15, 0.84)  32%,
-      rgba(23, 20, 15, 0.50)  54%,
-      rgba(23, 20, 15, 0.18)  74%,
-      rgba(23, 20, 15, 0.10) 100%),
-    /* Top header protection over bright skies */
+      rgba(23, 20, 15, 0.94)   0%,
+      rgba(23, 20, 15, 0.86)  32%,
+      rgba(23, 20, 15, 0.52)  54%,
+      rgba(23, 20, 15, 0.18)  75%,
+      rgba(23, 20, 15, 0.10) 100%);
+}
+
+[data-hero-vignette] {
+  background:
+    /* Top header protection over bright skies and bottom fade into section */
     linear-gradient(180deg,
-      rgba(23, 20, 15, 0.52)   0%,
-      rgba(23, 20, 15, 0.00)  140px),
-    /* Vertical grounding at base for CTAs */
-    linear-gradient(to top,
-      rgba(23, 20, 15, 0.44)   0%,
-      rgba(23, 20, 15, 0.00)  45%);
+      rgba(23, 20, 15, 0.65)   0%,
+      rgba(23, 20, 15, 0.00)  18%,
+      rgba(23, 20, 15, 0.00)  78%,
+      rgba(23, 20, 15, 0.75) 100%);
 }
 
 @media (max-width: 767px) {
   [data-hero-scrim] {
     background:
-      /* Vertical: light over card area at top, dark behind copy below 40% */
+      /* Vertical: lighter at top, near-solid from ~45% down behind copy */
       linear-gradient(180deg,
-        rgba(23, 20, 15, 0.20)   0%,
-        rgba(23, 20, 15, 0.30)  30%,
-        rgba(23, 20, 15, 0.88)  44%,
-        rgba(23, 20, 15, 0.96) 100%),
-      linear-gradient(180deg,
-        rgba(23, 20, 15, 0.52)   0%,
-        rgba(23, 20, 15, 0.00)  120px);
+        rgba(23, 20, 15, 0.35)   0%,
+        rgba(23, 20, 15, 0.50)  28%,
+        rgba(23, 20, 15, 0.90)  46%,
+        rgba(23, 20, 15, 0.96) 100%);
   }
 }

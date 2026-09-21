@@ -65,8 +65,8 @@ export function PhotoTransition({
     : "cubic-bezier(0.25, 0.8, 0.3, 1)",
   enableSheen = mode === "hero",
   reducedMotion = false,
-  className = "relative w-full h-full overflow-hidden rounded-3xl isolation-isolate",
-  sizes = "(min-width: 1024px) 45vw, 100vw",
+  className = "relative w-full h-full overflow-hidden isolation-isolate",
+  sizes = "100vw",
   onTransitionEnd,
 }: PhotoTransitionProps) {
   const [transitionState, setTransitionState] = useState<{

@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Hero Parallax & Depth Recede Motion", () => {
-  test("hero frame recedes in depth and fades as page scrolls away", async ({ page }) => {
+test.describe("Hero Parallax & Motion", () => {
+  test("hero copy recedes and fades as page scrolls away", async ({ page }) => {
     await page.goto("/");
     await page.waitForLoadState("networkidle");
     await page.locator("[data-hero]").waitFor();
@@ -10,9 +10,9 @@ test.describe("Hero Parallax & Depth Recede Motion", () => {
 
     // Measure at initial scroll = 0
     const initialStyles = await page.evaluate(() => {
-      const frame = document.querySelector("[data-hero-frame]") as HTMLElement;
-      if (!frame) return null;
-      const s = window.getComputedStyle(frame);
+      const copy = document.querySelector("[data-hero] h1")?.parentElement as HTMLElement;
+      if (!copy) return null;
+      const s = window.getComputedStyle(copy);
       return {
         opacity: parseFloat(s.opacity) || 1,
         transform: s.transform,
@@ -32,25 +32,20 @@ test.describe("Hero Parallax & Depth Recede Motion", () => {
     });
 
     const scrolledStyles = await page.evaluate(() => {
-      const frame = document.querySelector("[data-hero-frame]") as HTMLElement;
-      const copy = document.querySelector("[data-hero] .lg\\:col-span-6") as HTMLElement;
-      if (!frame || !copy) return null;
+      const copy = document.querySelector("[data-hero] h1")?.parentElement as HTMLElement;
+      if (!copy) return null;
 
-      const fStyle = window.getComputedStyle(frame);
       const cStyle = window.getComputedStyle(copy);
 
       return {
-        frameOpacity: parseFloat(fStyle.opacity),
-        frameTransform: fStyle.transform,
+        copyOpacity: parseFloat(cStyle.opacity),
         copyTransform: cStyle.transform,
       };
     });
 
     expect(scrolledStyles).not.toBeNull();
-    // Frame fades into page (< 0.60)
-    expect(scrolledStyles!.frameOpacity).toBeLessThanOrEqual(0.6);
-    // Copy and frame have different transforms (differential parallax)
-    expect(scrolledStyles!.frameTransform).not.toEqual(scrolledStyles!.copyTransform);
+    // Copy fades into page (< 0.60)
+    expect(scrolledStyles!.copyOpacity).toBeLessThanOrEqual(0.6);
   });
 
   test("scroll cue is visible initially and fades out on scroll", async ({ page }) => {
@@ -79,4 +74,3 @@ test.describe("Hero Parallax & Depth Recede Motion", () => {
     expect(result.opacity).toBeLessThanOrEqual(0.2);
   });
 });
-
