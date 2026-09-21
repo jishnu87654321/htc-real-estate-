@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  /* Ink — primary dark, green-tinted near-black */
+  --ink-950: #0a130f;
+  --ink-900: #0e1a16;
+  --ink-800: #16261f;
+  --ink-700: #1f3a2e;
+
+  /* Sage — secondary, supporting surfaces and muted text on dark */
+  --sage-700: #2e4c3f;
+  --sage-600: #3d6152;
+  --sage-500: #55806d;
+  --sage-400: #7fa392;
+  --sage-300: #a3c0b1;
+  --sage-200: #c5d8ce;
+  --sage-100: #e2ebe5;
+
+  /* Bone — warm paper, the default page background */
+  --bone-50: #fcfaf6;
+  --bone-100: #f7f4ee;
+  --bone-200: #efeae1;
+  --bone-300: #e2dbce;
+
+  /* Clay — the single accent. CTAs, active states, focus rings. Use sparingly. */
+  --clay-700: #9c4227;
+  --clay-600: #b7502f;
+  --clay-500: #d1603a;
+  --clay-300: #e9a88e;
+  --clay-100: #f7e3da;
+  --clay-fill: #b7502f;
+
+  /* Brass — verification, trust badges ONLY. Never a CTA. */
+  --brass-600: #7d6417;
+  --brass-500: #c9a227;
+  --brass-100: #f5ebcb;
+  --brass-badge: #7d6417;
+
+  /* Semantic */
+  --success: #2e7d5b;
+  --warning: #b7802f;
+  --danger: #a63a2e;
+
+  /* Text */
+  --text-primary: var(--ink-900);
+  --text-secondary: #46584f;
+  --text-tertiary: #63706a;
+  --text-inverse: var(--bone-50);
+
+  /* Surfaces */
+  --surface-page: var(--bone-100);
+  --surface-raised: var(--bone-50);
+  --surface-sunken: var(--bone-200);
+  --surface-inverse: var(--ink-900);
+  --border-subtle: var(--bone-300);
+  --border-strong: #cfc6b6;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+
+  /* Elevation — warm-tinted shadows, never neutral grey */
+  --shadow-sm: 0 1px 2px rgba(14, 26, 22, 0.05);
+  --shadow-md: 0 4px 12px rgba(14, 26, 22, 0.07), 0 1px 2px rgba(14, 26, 22, 0.04);
+  --shadow-lg: 0 12px 32px rgba(14, 26, 22, 0.1), 0 2px 6px rgba(14, 26, 22, 0.05);
+  --shadow-xl: 0 24px 64px rgba(14, 26, 22, 0.14);
+
+  /* Fonts */
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  /* Type scale */
+  --text-display-xl: clamp(2.75rem, 6vw, 5.25rem);
+  --text-display-lg: clamp(2.25rem, 4.5vw, 3.75rem);
+  --text-display-md: clamp(1.875rem, 3vw, 2.75rem);
+  --text-display-sm: clamp(1.5rem, 2.2vw, 2rem);
+  --text-title-lg: 1.25rem;
+  --text-title-md: 1.0625rem;
+  --text-body-lg: 1.125rem;
+  --text-body-md: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-label: 0.75rem;
+  --text-price: 1.5rem;
+}

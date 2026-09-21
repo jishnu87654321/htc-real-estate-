@@ -1,0 +1,552 @@
+[
+  {
+    "id": "communities-carousel-01",
+    "filename": "communities-carousel-01.jpg",
+    "path": "/sequences/communities-carousel-01.jpg",
+    "avgColor": "rgb(163, 167, 161)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "communities-carousel-02",
+    "filename": "communities-carousel-02.jpg",
+    "path": "/sequences/communities-carousel-02.jpg",
+    "avgColor": "rgb(121, 100, 78)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "communities-carousel-03",
+    "filename": "communities-carousel-03.jpg",
+    "path": "/sequences/communities-carousel-03.jpg",
+    "avgColor": "rgb(116, 102, 76)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "communities-carousel-04",
+    "filename": "communities-carousel-04.jpg",
+    "path": "/sequences/communities-carousel-04.jpg",
+    "avgColor": "rgb(127, 113, 88)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "communities-carousel-05",
+    "filename": "communities-carousel-05.jpg",
+    "path": "/sequences/communities-carousel-05.jpg",
+    "avgColor": "rgb(168, 148, 113)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "communities-seq-01",
+    "filename": "communities-seq-01.jpg",
+    "path": "/sequences/communities-seq-01.jpg",
+    "avgColor": "rgb(115, 122, 106)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "communities-seq-02",
+    "filename": "communities-seq-02.jpg",
+    "path": "/sequences/communities-seq-02.jpg",
+    "avgColor": "rgb(101, 91, 65)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "communities-seq-03",
+    "filename": "communities-seq-03.jpg",
+    "path": "/sequences/communities-seq-03.jpg",
+    "avgColor": "rgb(84, 83, 75)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "communities-seq-04",
+    "filename": "communities-seq-04.jpg",
+    "path": "/sequences/communities-seq-04.jpg",
+    "avgColor": "rgb(129, 113, 91)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "communities-seq-05",
+    "filename": "communities-seq-05.jpg",
+    "path": "/sequences/communities-seq-05.jpg",
+    "avgColor": "rgb(156, 138, 114)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "detail-gallery-01",
+    "filename": "detail-gallery-01.jpg",
+    "path": "/sequences/detail-gallery-01.jpg",
+    "avgColor": "rgb(127, 105, 79)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "detail-gallery-02",
+    "filename": "detail-gallery-02.jpg",
+    "path": "/sequences/detail-gallery-02.jpg",
+    "avgColor": "rgb(147, 125, 100)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "detail-gallery-03",
+    "filename": "detail-gallery-03.jpg",
+    "path": "/sequences/detail-gallery-03.jpg",
+    "avgColor": "rgb(156, 138, 114)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "detail-gallery-04",
+    "filename": "detail-gallery-04.jpg",
+    "path": "/sequences/detail-gallery-04.jpg",
+    "avgColor": "rgb(169, 163, 150)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "detail-gallery-05",
+    "filename": "detail-gallery-05.jpg",
+    "path": "/sequences/detail-gallery-05.jpg",
+    "avgColor": "rgb(123, 121, 103)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "detail-rooms-seq-01",
+    "filename": "detail-rooms-seq-01.jpg",
+    "path": "/sequences/detail-rooms-seq-01.jpg",
+    "avgColor": "rgb(127, 105, 79)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "detail-rooms-seq-02",
+    "filename": "detail-rooms-seq-02.jpg",
+    "path": "/sequences/detail-rooms-seq-02.jpg",
+    "avgColor": "rgb(156, 138, 114)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "detail-rooms-seq-03",
+    "filename": "detail-rooms-seq-03.jpg",
+    "path": "/sequences/detail-rooms-seq-03.jpg",
+    "avgColor": "rgb(147, 125, 100)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "detail-rooms-seq-04",
+    "filename": "detail-rooms-seq-04.jpg",
+    "path": "/sequences/detail-rooms-seq-04.jpg",
+    "avgColor": "rgb(169, 163, 150)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "detail-rooms-seq-05",
+    "filename": "detail-rooms-seq-05.jpg",
+    "path": "/sequences/detail-rooms-seq-05.jpg",
+    "avgColor": "rgb(123, 121, 103)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "home-difference-seq-01",
+    "filename": "home-difference-seq-01.jpg",
+    "path": "/sequences/home-difference-seq-01.jpg",
+    "avgColor": "rgb(56, 63, 64)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.45
+    },
+    "generated": true
+  },
+  {
+    "id": "home-difference-seq-02",
+    "filename": "home-difference-seq-02.jpg",
+    "path": "/sequences/home-difference-seq-02.jpg",
+    "avgColor": "rgb(66, 90, 108)",
+    "focal": {
+      "x": 0.52,
+      "y": 0.42
+    },
+    "generated": true
+  },
+  {
+    "id": "home-difference-seq-03",
+    "filename": "home-difference-seq-03.jpg",
+    "path": "/sequences/home-difference-seq-03.jpg",
+    "avgColor": "rgb(84, 83, 75)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.45
+    },
+    "generated": true
+  },
+  {
+    "id": "home-difference-seq-04",
+    "filename": "home-difference-seq-04.jpg",
+    "path": "/sequences/home-difference-seq-04.jpg",
+    "avgColor": "rgb(156, 138, 114)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.45
+    },
+    "generated": true
+  },
+  {
+    "id": "home-difference-seq-05",
+    "filename": "home-difference-seq-05.jpg",
+    "path": "/sequences/home-difference-seq-05.jpg",
+    "avgColor": "rgb(127, 105, 79)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.48
+    },
+    "generated": true
+  },
+  {
+    "id": "home-feature-01",
+    "filename": "home-feature-01.jpg",
+    "path": "/sequences/home-feature-01.jpg",
+    "avgColor": "rgb(138, 122, 104)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "home-feature-02",
+    "filename": "home-feature-02.jpg",
+    "path": "/sequences/home-feature-02.jpg",
+    "avgColor": "rgb(174, 156, 126)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "home-feature-03",
+    "filename": "home-feature-03.jpg",
+    "path": "/sequences/home-feature-03.jpg",
+    "avgColor": "rgb(126, 133, 119)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "home-feature-04",
+    "filename": "home-feature-04.jpg",
+    "path": "/sequences/home-feature-04.jpg",
+    "avgColor": "rgb(143, 130, 117)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "home-feature-05",
+    "filename": "home-feature-05.jpg",
+    "path": "/sequences/home-feature-05.jpg",
+    "avgColor": "rgb(103, 85, 63)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "home-feature-06",
+    "filename": "home-feature-06.jpg",
+    "path": "/sequences/home-feature-06.jpg",
+    "avgColor": "rgb(123, 130, 95)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "home-featured-01",
+    "filename": "home-featured-01.jpg",
+    "path": "/sequences/home-featured-01.jpg",
+    "avgColor": "rgb(127, 105, 79)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "home-featured-02",
+    "filename": "home-featured-02.jpg",
+    "path": "/sequences/home-featured-02.jpg",
+    "avgColor": "rgb(156, 138, 114)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "home-featured-03",
+    "filename": "home-featured-03.jpg",
+    "path": "/sequences/home-featured-03.jpg",
+    "avgColor": "rgb(147, 125, 100)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "home-featured-04",
+    "filename": "home-featured-04.jpg",
+    "path": "/sequences/home-featured-04.jpg",
+    "avgColor": "rgb(123, 121, 103)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "home-featured-05",
+    "filename": "home-featured-05.jpg",
+    "path": "/sequences/home-featured-05.jpg",
+    "avgColor": "rgb(169, 163, 150)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "home-featured-06",
+    "filename": "home-featured-06.jpg",
+    "path": "/sequences/home-featured-06.jpg",
+    "avgColor": "rgb(101, 91, 65)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "home-hero-seq-01",
+    "filename": "home-hero-seq-01.jpg",
+    "path": "/sequences/home-hero-seq-01.jpg",
+    "avgColor": "rgb(129, 113, 91)",
+    "focal": {
+      "x": 0.55,
+      "y": 0.45
+    },
+    "generated": true
+  },
+  {
+    "id": "home-hero-seq-02",
+    "filename": "home-hero-seq-02.jpg",
+    "path": "/sequences/home-hero-seq-02.jpg",
+    "avgColor": "rgb(115, 122, 106)",
+    "focal": {
+      "x": 0.52,
+      "y": 0.48
+    },
+    "generated": true
+  },
+  {
+    "id": "home-hero-seq-03",
+    "filename": "home-hero-seq-03.jpg",
+    "path": "/sequences/home-hero-seq-03.jpg",
+    "avgColor": "rgb(169, 163, 150)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.45
+    },
+    "generated": true
+  },
+  {
+    "id": "home-hero-seq-04",
+    "filename": "home-hero-seq-04.jpg",
+    "path": "/sequences/home-hero-seq-04.jpg",
+    "avgColor": "rgb(101, 91, 65)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.46
+    },
+    "generated": true
+  },
+  {
+    "id": "home-owners-01",
+    "filename": "home-owners-01.jpg",
+    "path": "/sequences/home-owners-01.jpg",
+    "avgColor": "rgb(147, 125, 100)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "owners-carousel-01",
+    "filename": "owners-carousel-01.jpg",
+    "path": "/sequences/owners-carousel-01.jpg",
+    "avgColor": "rgb(170, 155, 141)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "owners-carousel-02",
+    "filename": "owners-carousel-02.jpg",
+    "path": "/sequences/owners-carousel-02.jpg",
+    "avgColor": "rgb(150, 133, 116)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "owners-carousel-03",
+    "filename": "owners-carousel-03.jpg",
+    "path": "/sequences/owners-carousel-03.jpg",
+    "avgColor": "rgb(148, 118, 90)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "owners-carousel-04",
+    "filename": "owners-carousel-04.jpg",
+    "path": "/sequences/owners-carousel-04.jpg",
+    "avgColor": "rgb(142, 125, 96)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "owners-carousel-05",
+    "filename": "owners-carousel-05.jpg",
+    "path": "/sequences/owners-carousel-05.jpg",
+    "avgColor": "rgb(155, 129, 102)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "owners-seq-01",
+    "filename": "owners-seq-01.jpg",
+    "path": "/sequences/owners-seq-01.jpg",
+    "avgColor": "rgb(169, 163, 150)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "owners-seq-02",
+    "filename": "owners-seq-02.jpg",
+    "path": "/sequences/owners-seq-02.jpg",
+    "avgColor": "rgb(127, 105, 79)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  },
+  {
+    "id": "owners-seq-03",
+    "filename": "owners-seq-03.jpg",
+    "path": "/sequences/owners-seq-03.jpg",
+    "avgColor": "rgb(147, 125, 100)",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "generated": true
+  }
+]

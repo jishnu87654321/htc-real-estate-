@@ -1,0 +1,842 @@
+[
+  {
+    "slide": "01 / 04",
+    "viewport": "1440px",
+    "element": "H1",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "1440px",
+    "element": "Rotating Tag",
+    "textColor": "rgb(224,90,74)",
+    "textLum": "0.237",
+    "worstBgLum": "0.012",
+    "contrastRatio": "4.62:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "1440px",
+    "element": "Rotating Line",
+    "textColor": "rgb(230,230,230)",
+    "textLum": "0.791",
+    "worstBgLum": "0.012",
+    "contrastRatio": "13.57:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "1440px",
+    "element": "Reassurance",
+    "textColor": "rgb(190,190,190)",
+    "textLum": "0.515",
+    "worstBgLum": "0.012",
+    "contrastRatio": "9.11:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "1440px",
+    "element": "CTA (Find Home)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "1440px",
+    "element": "CTA (List Prop)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "1440px",
+    "element": "Header Nav",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "1440px",
+    "element": "H1",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "1440px",
+    "element": "Rotating Tag",
+    "textColor": "rgb(224,90,74)",
+    "textLum": "0.237",
+    "worstBgLum": "0.012",
+    "contrastRatio": "4.62:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "1440px",
+    "element": "Rotating Line",
+    "textColor": "rgb(230,230,230)",
+    "textLum": "0.791",
+    "worstBgLum": "0.012",
+    "contrastRatio": "13.57:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "1440px",
+    "element": "Reassurance",
+    "textColor": "rgb(190,190,190)",
+    "textLum": "0.515",
+    "worstBgLum": "0.012",
+    "contrastRatio": "9.11:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "1440px",
+    "element": "CTA (Find Home)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "1440px",
+    "element": "CTA (List Prop)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "1440px",
+    "element": "Header Nav",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "1440px",
+    "element": "H1",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "1440px",
+    "element": "Rotating Tag",
+    "textColor": "rgb(224,90,74)",
+    "textLum": "0.237",
+    "worstBgLum": "0.012",
+    "contrastRatio": "4.62:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "1440px",
+    "element": "Rotating Line",
+    "textColor": "rgb(230,230,230)",
+    "textLum": "0.791",
+    "worstBgLum": "0.012",
+    "contrastRatio": "13.57:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "1440px",
+    "element": "Reassurance",
+    "textColor": "rgb(190,190,190)",
+    "textLum": "0.515",
+    "worstBgLum": "0.012",
+    "contrastRatio": "9.11:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "1440px",
+    "element": "CTA (Find Home)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "1440px",
+    "element": "CTA (List Prop)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "1440px",
+    "element": "Header Nav",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "1440px",
+    "element": "H1",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "1440px",
+    "element": "Rotating Tag",
+    "textColor": "rgb(224,90,74)",
+    "textLum": "0.237",
+    "worstBgLum": "0.012",
+    "contrastRatio": "4.62:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "1440px",
+    "element": "Rotating Line",
+    "textColor": "rgb(230,230,230)",
+    "textLum": "0.791",
+    "worstBgLum": "0.012",
+    "contrastRatio": "13.57:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "1440px",
+    "element": "Reassurance",
+    "textColor": "rgb(190,190,190)",
+    "textLum": "0.515",
+    "worstBgLum": "0.012",
+    "contrastRatio": "9.11:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "1440px",
+    "element": "CTA (Find Home)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "1440px",
+    "element": "CTA (List Prop)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "1440px",
+    "element": "Header Nav",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "1024px",
+    "element": "H1",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "1024px",
+    "element": "Rotating Tag",
+    "textColor": "rgb(224,90,74)",
+    "textLum": "0.237",
+    "worstBgLum": "0.012",
+    "contrastRatio": "4.62:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "1024px",
+    "element": "Rotating Line",
+    "textColor": "rgb(230,230,230)",
+    "textLum": "0.791",
+    "worstBgLum": "0.012",
+    "contrastRatio": "13.57:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "1024px",
+    "element": "Reassurance",
+    "textColor": "rgb(190,190,190)",
+    "textLum": "0.515",
+    "worstBgLum": "0.012",
+    "contrastRatio": "9.11:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "1024px",
+    "element": "CTA (Find Home)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "1024px",
+    "element": "CTA (List Prop)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "1024px",
+    "element": "Header Nav",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "1024px",
+    "element": "H1",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "1024px",
+    "element": "Rotating Tag",
+    "textColor": "rgb(224,90,74)",
+    "textLum": "0.237",
+    "worstBgLum": "0.012",
+    "contrastRatio": "4.62:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "1024px",
+    "element": "Rotating Line",
+    "textColor": "rgb(230,230,230)",
+    "textLum": "0.791",
+    "worstBgLum": "0.012",
+    "contrastRatio": "13.57:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "1024px",
+    "element": "Reassurance",
+    "textColor": "rgb(190,190,190)",
+    "textLum": "0.515",
+    "worstBgLum": "0.012",
+    "contrastRatio": "9.11:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "1024px",
+    "element": "CTA (Find Home)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "1024px",
+    "element": "CTA (List Prop)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "1024px",
+    "element": "Header Nav",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "1024px",
+    "element": "H1",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "1024px",
+    "element": "Rotating Tag",
+    "textColor": "rgb(224,90,74)",
+    "textLum": "0.237",
+    "worstBgLum": "0.012",
+    "contrastRatio": "4.62:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "1024px",
+    "element": "Rotating Line",
+    "textColor": "rgb(230,230,230)",
+    "textLum": "0.791",
+    "worstBgLum": "0.012",
+    "contrastRatio": "13.57:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "1024px",
+    "element": "Reassurance",
+    "textColor": "rgb(190,190,190)",
+    "textLum": "0.515",
+    "worstBgLum": "0.012",
+    "contrastRatio": "9.11:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "1024px",
+    "element": "CTA (Find Home)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "1024px",
+    "element": "CTA (List Prop)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "1024px",
+    "element": "Header Nav",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "1024px",
+    "element": "H1",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "1024px",
+    "element": "Rotating Tag",
+    "textColor": "rgb(224,90,74)",
+    "textLum": "0.237",
+    "worstBgLum": "0.012",
+    "contrastRatio": "4.62:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "1024px",
+    "element": "Rotating Line",
+    "textColor": "rgb(230,230,230)",
+    "textLum": "0.791",
+    "worstBgLum": "0.012",
+    "contrastRatio": "13.57:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "1024px",
+    "element": "Reassurance",
+    "textColor": "rgb(190,190,190)",
+    "textLum": "0.515",
+    "worstBgLum": "0.012",
+    "contrastRatio": "9.11:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "1024px",
+    "element": "CTA (Find Home)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "1024px",
+    "element": "CTA (List Prop)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "1024px",
+    "element": "Header Nav",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "390px",
+    "element": "H1",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "390px",
+    "element": "Rotating Tag",
+    "textColor": "rgb(224,90,74)",
+    "textLum": "0.237",
+    "worstBgLum": "0.012",
+    "contrastRatio": "4.62:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "390px",
+    "element": "Rotating Line",
+    "textColor": "rgb(230,230,230)",
+    "textLum": "0.791",
+    "worstBgLum": "0.012",
+    "contrastRatio": "13.57:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "390px",
+    "element": "Reassurance",
+    "textColor": "rgb(190,190,190)",
+    "textLum": "0.515",
+    "worstBgLum": "0.012",
+    "contrastRatio": "9.11:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "390px",
+    "element": "CTA (Find Home)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "390px",
+    "element": "CTA (List Prop)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "01 / 04",
+    "viewport": "390px",
+    "element": "Header Nav",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "390px",
+    "element": "H1",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "390px",
+    "element": "Rotating Tag",
+    "textColor": "rgb(224,90,74)",
+    "textLum": "0.237",
+    "worstBgLum": "0.012",
+    "contrastRatio": "4.62:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "390px",
+    "element": "Rotating Line",
+    "textColor": "rgb(230,230,230)",
+    "textLum": "0.791",
+    "worstBgLum": "0.012",
+    "contrastRatio": "13.57:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "390px",
+    "element": "Reassurance",
+    "textColor": "rgb(190,190,190)",
+    "textLum": "0.515",
+    "worstBgLum": "0.012",
+    "contrastRatio": "9.11:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "390px",
+    "element": "CTA (Find Home)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "390px",
+    "element": "CTA (List Prop)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "02 / 04",
+    "viewport": "390px",
+    "element": "Header Nav",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "390px",
+    "element": "H1",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "390px",
+    "element": "Rotating Tag",
+    "textColor": "rgb(224,90,74)",
+    "textLum": "0.237",
+    "worstBgLum": "0.012",
+    "contrastRatio": "4.62:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "390px",
+    "element": "Rotating Line",
+    "textColor": "rgb(230,230,230)",
+    "textLum": "0.791",
+    "worstBgLum": "0.012",
+    "contrastRatio": "13.57:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "390px",
+    "element": "Reassurance",
+    "textColor": "rgb(190,190,190)",
+    "textLum": "0.515",
+    "worstBgLum": "0.012",
+    "contrastRatio": "9.11:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "390px",
+    "element": "CTA (Find Home)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "390px",
+    "element": "CTA (List Prop)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "03 / 04",
+    "viewport": "390px",
+    "element": "Header Nav",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "390px",
+    "element": "H1",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "390px",
+    "element": "Rotating Tag",
+    "textColor": "rgb(224,90,74)",
+    "textLum": "0.237",
+    "worstBgLum": "0.012",
+    "contrastRatio": "4.62:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "390px",
+    "element": "Rotating Line",
+    "textColor": "rgb(230,230,230)",
+    "textLum": "0.791",
+    "worstBgLum": "0.012",
+    "contrastRatio": "13.57:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "390px",
+    "element": "Reassurance",
+    "textColor": "rgb(190,190,190)",
+    "textLum": "0.515",
+    "worstBgLum": "0.012",
+    "contrastRatio": "9.11:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "390px",
+    "element": "CTA (Find Home)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "390px",
+    "element": "CTA (List Prop)",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  },
+  {
+    "slide": "04 / 04",
+    "viewport": "390px",
+    "element": "Header Nav",
+    "textColor": "rgb(255,255,255)",
+    "textLum": "1.000",
+    "worstBgLum": "0.012",
+    "contrastRatio": "16.94:1",
+    "status": "PASS"
+  }
+]

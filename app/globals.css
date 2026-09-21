@@ -1,0 +1,359 @@
+@import "tailwindcss";
+
+:root {
+  /* ─── 60% · WHITE FAMILY — surfaces ─── */
+  --white:      #FFFFFF;
+  --paper-50:   #FDFCFB;   /* page background, faintly warm */
+  --paper-100:  #F8F6F3;   /* sunken / alternating sections */
+  --paper-200:  #F0EDE8;   /* borders, dividers, placeholder fill */
+  --paper-300:  #E4DFD8;   /* strong borders */
+
+  /* ─── 30% · RED FAMILY — brand, action, emphasis ─── */
+  --red-900:    #5E1711;
+  --red-800:    #7E1F17;
+  --red-700:    #99261C;
+  --red-600:    #B52D20;   /* PRIMARY — buttons, CTAs, active states */
+  --red-500:    #CC3A2B;   /* hover */
+  --red-400:    #E05A4A;
+  --red-200:    #F4C4BD;
+  --red-100:    #FBE6E2;   /* tinted surfaces, badges */
+  --red-50:     #FDF4F2;   /* faintest wash, alternating band */
+
+  /* ─── 10% · GREEN FAMILY — verification, trust, success ─── */
+  --green-800:  #14472F;
+  --green-700:  #1B5C3D;   /* verified text */
+  --green-600:  #24744E;
+  --green-500:  #2F9063;
+  --green-200:  #BFE0CE;
+  --green-100:  #E4F2EA;   /* verified badge fill */
+
+  /* ─── Neutral ink — body text, not part of the 60/30/10 ─── */
+  --ink-900:    #17140F;   /* headings */
+  --ink-700:    #2E2820;
+  --ink-600:    #514A40;   /* body */
+  --ink-400:    #7D7568;   /* tertiary — 16px+ only, never essential info */
+  --ink-200:    #B8B1A6;
+
+  /* ─── Semantic ─── */
+  --text-primary:   var(--ink-900);
+  --text-secondary: var(--ink-600);
+  --text-tertiary:  var(--ink-400);
+  --text-inverse:   var(--white);
+  --text-brand:     var(--red-700);
+  --text-verified:  var(--green-700);
+
+  --surface-page:    var(--paper-50);
+  --surface-raised:  var(--white);
+  --surface-sunken:  var(--paper-100);
+  --surface-brand:   var(--red-600);     /* the one red band per page */
+  --surface-tint:    var(--red-50);
+  --surface-verified:var(--green-100);
+
+  --border-subtle:   var(--paper-200);
+  --border-strong:   var(--paper-300);
+  --border-brand:    var(--red-200);
+  --border-verified: var(--green-200);
+
+  --focus-ring:      var(--red-600);
+
+  /* ─── Layout ─── */
+  --header-h:        72px;
+
+  /* ─── Legacy compatibility mappings for migration ─── */
+  --clay-700:        var(--red-700);
+  --clay-600:        var(--red-600);
+  --clay-500:        var(--red-500);
+  --clay-300:        var(--red-200);
+  --clay-100:        var(--red-100);
+  --clay-fill:       var(--red-600);
+
+  --brass-600:       var(--green-700);
+  --brass-500:       var(--green-600);
+  --brass-100:       var(--green-100);
+  --brass-badge:     var(--green-700);
+
+  --sage-700:        var(--ink-700);
+  --sage-600:        var(--ink-600);
+  --sage-500:        var(--ink-400);
+  --sage-300:        var(--paper-300);
+  --sage-200:        var(--paper-200);
+  --sage-100:        var(--paper-100);
+
+  --bone-50:         var(--white);
+  --bone-100:        var(--paper-50);
+  --bone-200:        var(--paper-100);
+  --bone-300:        var(--paper-200);
+
+  --surface-inverse: var(--surface-brand);
+
+  /* ─── Radius ─── */
+  --radius-sm: 6px;  --radius-md: 10px;  --radius-lg: 16px;
+  --radius-xl: 24px; --radius-full: 999px;
+
+  /* ─── Elevation — warm-tinted, never neutral grey ─── */
+  --shadow-sm: 0 1px 2px rgba(23, 20, 15, 0.04);
+  --shadow-md: 0 4px 14px rgba(23, 20, 15, 0.06), 0 1px 3px rgba(23, 20, 15, 0.04);
+  --shadow-lg: 0 14px 36px rgba(23, 20, 15, 0.08), 0 3px 8px rgba(23, 20, 15, 0.05);
+  --shadow-xl: 0 28px 70px rgba(23, 20, 15, 0.11);
+
+  /* ─── Fonts ─── */
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  /* ─── Type scale ─── */
+  --text-display-xl: clamp(2.75rem, 6vw, 5.25rem);
+  --text-display-lg: clamp(2.25rem, 4.5vw, 3.75rem);
+  --text-display-md: clamp(1.875rem, 3vw, 2.75rem);
+  --text-display-sm: clamp(1.5rem, 2.2vw, 2rem);
+  --text-title-lg: 1.25rem;
+  --text-title-md: 1.0625rem;
+  --text-body-lg: 1.125rem;
+  --text-body-md: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-label: 0.75rem;
+  --text-price: 1.5rem;
+}
+
+@theme inline {
+  --color-white: var(--white);
+  --color-paper-50: var(--paper-50);
+  --color-paper-100: var(--paper-100);
+  --color-paper-200: var(--paper-200);
+  --color-paper-300: var(--paper-300);
+
+  --color-red-900: var(--red-900);
+  --color-red-800: var(--red-800);
+  --color-red-700: var(--red-700);
+  --color-red-600: var(--red-600);
+  --color-red-500: var(--red-500);
+  --color-red-400: var(--red-400);
+  --color-red-200: var(--red-200);
+  --color-red-100: var(--red-100);
+  --color-red-50: var(--red-50);
+
+  --color-green-800: var(--green-800);
+  --color-green-700: var(--green-700);
+  --color-green-600: var(--green-600);
+  --color-green-500: var(--green-500);
+  --color-green-200: var(--green-200);
+  --color-green-100: var(--green-100);
+
+  --color-ink-900: var(--ink-900);
+  --color-ink-700: var(--ink-700);
+  --color-ink-600: var(--ink-600);
+  --color-ink-400: var(--ink-400);
+  --color-ink-200: var(--ink-200);
+
+  --color-clay-700: var(--clay-700);
+  --color-clay-600: var(--clay-600);
+  --color-clay-500: var(--clay-500);
+  --color-clay-300: var(--clay-300);
+  --color-clay-100: var(--clay-100);
+  --color-clay-fill: var(--clay-fill);
+
+  --color-brass-600: var(--brass-600);
+  --color-brass-500: var(--brass-500);
+  --color-brass-100: var(--brass-100);
+  --color-brass-badge: var(--brass-badge);
+
+  --color-sage-700: var(--sage-700);
+  --color-sage-600: var(--sage-600);
+  --color-sage-500: var(--sage-500);
+  --color-sage-300: var(--sage-300);
+  --color-sage-200: var(--sage-200);
+  --color-sage-100: var(--sage-100);
+
+  --color-bone-50: var(--bone-50);
+  --color-bone-100: var(--bone-100);
+  --color-bone-200: var(--bone-200);
+  --color-bone-300: var(--bone-300);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-text-inverse: var(--text-inverse);
+  --color-text-brand: var(--text-brand);
+  --color-text-verified: var(--text-verified);
+
+  --color-surface-page: var(--surface-page);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-surface-brand: var(--surface-brand);
+  --color-surface-tint: var(--surface-tint);
+  --color-surface-verified: var(--surface-verified);
+  --color-surface-inverse: var(--surface-inverse);
+
+  --color-border-subtle: var(--border-subtle);
+  --color-border-strong: var(--border-strong);
+  --color-border-brand: var(--border-brand);
+  --color-border-verified: var(--border-verified);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-full: var(--radius-full);
+
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+
+  --text-display-xl: var(--text-display-xl);
+  --text-display-lg: var(--text-display-lg);
+  --text-display-md: var(--text-display-md);
+  --text-display-sm: var(--text-display-sm);
+  --text-title-lg: var(--text-title-lg);
+  --text-title-md: var(--text-title-md);
+  --text-body-lg: var(--text-body-lg);
+  --text-body-md: var(--text-body-md);
+  --text-body-sm: var(--text-body-sm);
+  --text-label: var(--text-label);
+  --text-price: var(--text-price);
+}
+
+* {
+  border-color: var(--border-subtle);
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--surface-page);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--red-100);
+  color: var(--red-900);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  background: var(--ink-900);
+  color: var(--white);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  transition: top 0.15s ease-out;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--paper-100) 0%,
+    var(--paper-200) 50%,
+    var(--paper-100) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+  }
+}
+
+/* Accordion — pure CSS grid-rows trick */
+.accordion-item summary {
+  list-style: none;
+}
+.accordion-item summary::-webkit-details-marker {
+  display: none;
+}
+.accordion-item .accordion-chevron {
+  transition: transform 0.2s ease-in-out;
+}
+.accordion-item[open] .accordion-chevron {
+  transform: rotate(180deg);
+}
+.accordion-item .accordion-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s var(--ease-inout, ease-in-out);
+}
+.accordion-item[open] .accordion-body {
+  grid-template-rows: 1fr;
+}
+.accordion-item .accordion-body-inner {
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.15s ease 0s;
+}
+.accordion-item[open] .accordion-body-inner {
+  opacity: 1;
+  transition: opacity 0.2s ease 0.06s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .accordion-item .accordion-body,
+  .accordion-item .accordion-body-inner,
+  .accordion-item .accordion-chevron {
+    transition: none;
+  }
+}
+
+/* ─── Hero Scrim (REV-11 §4.1, §4.5 & §5) ─── */
+[data-hero-scrim] {
+  background:
+    /* Horizontal: dark behind copy on left, near-clear around card on right */
+    linear-gradient(90deg,
+      rgba(23, 20, 15, 0.92)   0%,
+      rgba(23, 20, 15, 0.84)  32%,
+      rgba(23, 20, 15, 0.50)  54%,
+      rgba(23, 20, 15, 0.18)  74%,
+      rgba(23, 20, 15, 0.10) 100%),
+    /* Top header protection over bright skies */
+    linear-gradient(180deg,
+      rgba(23, 20, 15, 0.52)   0%,
+      rgba(23, 20, 15, 0.00)  140px),
+    /* Vertical grounding at base for CTAs */
+    linear-gradient(to top,
+      rgba(23, 20, 15, 0.44)   0%,
+      rgba(23, 20, 15, 0.00)  45%);
+}
+
+@media (max-width: 767px) {
+  [data-hero-scrim] {
+    background:
+      /* Vertical: light over card area at top, dark behind copy below 40% */
+      linear-gradient(180deg,
+        rgba(23, 20, 15, 0.20)   0%,
+        rgba(23, 20, 15, 0.30)  30%,
+        rgba(23, 20, 15, 0.88)  44%,
+        rgba(23, 20, 15, 0.96) 100%),
+      linear-gradient(180deg,
+        rgba(23, 20, 15, 0.52)   0%,
+        rgba(23, 20, 15, 0.00)  120px);
+  }
+}
